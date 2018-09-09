@@ -4,7 +4,7 @@
     <jumbotron></jumbotron>
     <introduce :title="titleOne" :cards="cardsOne"></introduce>
     <introduce :title="titleTwo" :cards="cardsTwo"></introduce>
-    <news></news>
+    <news-div :title="titleThree" :news="news"></news-div>
     <footer-div></footer-div>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
     'header-div': Header,
     'jumbotron': Jumbotron,
     'introduce': IntroduceBox,
-    'news': NewsBox,
+    'news-div': NewsBox,
     'footer-div': Footer
   },
   data () {
@@ -76,7 +76,41 @@ export default {
           imgDescribe: '图像识别',
           cardDescribe: '智能鉴黄，告别传统人工审核 。识别广告图片中的字符内容信息，辅助人工过滤各类诈骗、微商等小广告图片，净化互联网UGC类产品。'
         }
+      ],
+      titleThree: {
+        url: '#',
+        name: '新闻公告',
+        describe: 'NEWS & NOTICE'
+      },
+      news: [
+        {
+          id: 0,
+          title: '活动通知',
+          url: '/news/134',
+          date: '2018-04-09',
+          describe: '       尊敬的联众用户朋友：\n' +
+          '      \n' +
+          '      为感谢大家一直以来对平台的包容和厚爱。特此平台周年的日子，推出充值优惠活动。\n' +
+          '  活动定于 4月10凌晨开始 至 4月12号 24点结束（3天）届时100...'
+        }, {
+          id: 1,
+          title: '联众春节放假安排',
+          url: '/news/133',
+          date: '2018-02-07',
+          describe: '\n' +
+          '\t尊敬的联众用户： \n' +
+          '\n' +
+          '\n' +
+          '\t   大家好。新春佳节将至，联众放假安排如下：2018年2月13日至22日放假，23日（初八）正式上班。\n' +
+          '\n' +
+          '\n' +
+          '\t        \n' +
+          '\n' +
+          '\n' +
+          '\t       放假期间安排客服值班，值班时间 上午10点--12...'
+        }
       ]
+
     }
   }
 }
