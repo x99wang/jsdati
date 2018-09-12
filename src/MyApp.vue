@@ -5,7 +5,7 @@
     <introduce :title="titleOne" :cards="cardsOne"></introduce>
     <introduce :title="titleTwo" :cards="cardsTwo"></introduce>
     <news-div :title="titleThree" :news="news"></news-div>
-    <footer-div></footer-div>
+    <footer-div :contents="footerOne"></footer-div>
   </div>
 </template>
 
@@ -109,8 +109,50 @@ export default {
           '\n' +
           '\t       放假期间安排客服值班，值班时间 上午10点--12...'
         }
+      ],
+      footerOne: [
+        {
+          id: 0,
+          title: '用户帮助',
+          content: '',
+          describe: '',
+          link: [{
+            id: 0,
+            name: '文档中心',
+            url: '/docs'
+          }, {
+            id: 1,
+            name: '服务价格',
+            url: '/docs/price'
+          }]
+        }, {
+          id: 1,
+          title: '关于我们',
+          content: '',
+          describe: '',
+          link: [{
+            id: 0,
+            name: '公司介绍',
+            url: '/about'
+          }, {
+            id: 1,
+            name: '联系我们',
+            url: '/contact'
+          }]
+        }, {
+          id: 2,
+          title: '客服QQ:',
+          content: '800083570',
+          describe: '',
+          link: []
+        }, {
+          id: 3,
+          title: '关于我们',
+          content: '18270569376',
+          describe: '周一至周六 8:30-18:00',
+          link: []
+        }
       ]
-
     }
   }
 }
