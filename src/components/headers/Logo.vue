@@ -5,12 +5,17 @@
 <script>
 export default {
   name: 'Logo',
-  data () {
-    return {
-      url: '#',
-      image: {
-        name: 'Name',
-        url: '*.png'
+  props: {
+    logo: {
+      type: Object,
+      default: function () {
+        return {
+          url: '#',
+          image: {
+            name: 'Name',
+            url: '*.png'
+          }
+        }
       }
     }
   }

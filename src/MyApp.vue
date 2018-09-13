@@ -1,31 +1,52 @@
 <template>
   <div class="my-app">
     <header-div></header-div>
-    <jumbotron></jumbotron>
+    <carousel :imgs="imgs"></carousel>
     <introduce :title="titleOne" :cards="cardsOne"></introduce>
     <introduce :title="titleTwo" :cards="cardsTwo"></introduce>
     <news-div :title="titleThree" :news="news"></news-div>
-    <footer-div :contents="footerOne"></footer-div>
+    <footer-div :contents="footerOne"
+                :notice="notice"
+                :copyright="copyright"
+                :inf="beianInf"></footer-div>
   </div>
 </template>
 
 <script>
 import Header from './components/headers/Header'
-import Jumbotron from './components/content/Jumbotron'
+import CarouselBox from './components/content/CarouselBox'
 import IntroduceBox from './components/content/IntroduceBox'
 import NewsBox from './components/content/NewsBox'
 import Footer from './components/footers/Footer'
+
 export default {
   name: 'MyApp',
   components: {
     'header-div': Header,
-    'jumbotron': Jumbotron,
+    'carousel': CarouselBox,
     'introduce': IntroduceBox,
     'news-div': NewsBox,
     'footer-div': Footer
   },
   data () {
     return {
+      imgs: [{
+        id: 0,
+        name: '1',
+        src: 'https://static.jsdati.com/images/portal-v2/b/12.jpg'
+      }, {
+        id: 1,
+        name: '2',
+        src: 'https://static.jsdati.com/images/portal-v2/b/13.jpg'
+      }, {
+        id: 2,
+        name: '3',
+        src: 'https://static.jsdati.com/images/portal-v2/b/14.jpg'
+      }, {
+        id: 3,
+        name: '4',
+        src: 'https://static.jsdati.com/images/portal-v2/b/15.jpg'
+      }],
       titleOne: {
         url: '#',
         name: '我们的优势',
@@ -152,11 +173,75 @@ export default {
           describe: '周一至周六 8:30-18:00',
           link: []
         }
-      ]
+      ],
+      notice: {
+        title: '免责声明',
+        content: '联众平台仅为残障人士以及有需要的个人和企业提供图像识别和图像识别分类服务，并不针对任何网站或个人。所有图片以及其他图像，均由用户或软件商上传。如有不妥请联系客服进行处理，联众对此不承担任何保证责任。如用作违法用途，一经发现我们会立即封号，递交相关执法部门处理，请广大用户自觉遵守国家相关法律法规。其他单位或者个人如果发现我平台用户侵害到了您的利益，请联系我们。欢迎举报！',
+        tel: '举报电话：18270569376',
+        qq: '举报QQ ：800083570'
+      },
+      copyright: 'Copyright © 2008-2018\n' +
+      '            地址：江西省宜春市袁州区环城西路御湖城4栋-03。',
+      beianInf: {
+        record: '赣ICP备17006631号-1',
+        url: 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36090202000059',
+        img: 'https://static.jsdati.com/images/portal-v2/gaba.png',
+        parent: '赣公网安备36090202000059号'
+      }
     }
   }
 }
 </script>
+
+<style>
+  body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 300px;
+    font-family: Arial,"Microsoft Yahei";
+    color: #333;
+  }
+  .clearfix {
+    zoom: 1;
+  }
+  .wrap {
+     width: 1200px;
+     margin-left: auto;
+     margin-right: auto;
+   }
+  .mat45 {
+    margin-top: 45px;
+  }
+  .news-type {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+  .font-Impact {
+    font-family: Impact,"microsoft yahei";
+  }
+  .font24 {
+    font-size: 24px;
+  }
+  .gray {
+    color: #999;
+  }
+  .gray {
+    color: #999;
+  }
+  a, a img {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  a {
+    color: #00abee;
+  }
+</style>
 
 <style scoped>
 
