@@ -1,9 +1,9 @@
 <template>
   <div class="my-app">
-    <header-div></header-div>
+    <header-div :logo="logo"></header-div>
     <carousel :imgs="imgs"></carousel>
-    <introduce :title="titleOne" :cards="cardsOne"></introduce>
-    <introduce :title="titleTwo" :cards="cardsTwo"></introduce>
+    <introduce :title="titleOne" :cards="cardsOne" :style-object="backgroundOne"></introduce>
+    <introduce :title="titleTwo" :cards="cardsTwo" :style-object="backgroundTwo"></introduce>
     <news-div :title="titleThree" :news="news"></news-div>
     <footer-div :contents="footerOne"
                 :notice="notice"
@@ -30,6 +30,13 @@ export default {
   },
   data () {
     return {
+      logo: {
+        url: 'https://www.jsdati.com/',
+        image: {
+          name: '联众',
+          url: 'https://static.jsdati.com/images/portal-v2/logo.png'
+        }
+      },
       imgs: [{
         id: 0,
         name: '1',
@@ -80,6 +87,9 @@ export default {
           cardDescribe: '故障高效修复，为您的业务24小时保价护航'
         }
       ],
+      backgroundOne: {
+        background: 'url(https://static.jsdati.com/images/portal-v2/p-bg.png) no-repeat right 90%'
+      },
       titleTwo: {
         url: '#',
         name: '我们能做什么',
@@ -98,6 +108,9 @@ export default {
           cardDescribe: '智能鉴黄，告别传统人工审核 。识别广告图片中的字符内容信息，辅助人工过滤各类诈骗、微商等小广告图片，净化互联网UGC类产品。'
         }
       ],
+      backgroundTwo: {
+        background: 'url(https://static.jsdati.com/images/portal-v2/side-icon-2.png) no-repeat right 90%'
+      },
       titleThree: {
         url: '#',
         name: '新闻公告',
@@ -230,6 +243,9 @@ export default {
   }
   .gray {
     color: #999;
+  }
+  * {
+    zoom: 1
   }
   a, a img {
     -webkit-transition: all .5s ease;

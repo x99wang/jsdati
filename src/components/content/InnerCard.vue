@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-  .inner-cards dl {
+  dl {
     box-sizing: border-box;
     background: #fff;
     float: left;
@@ -38,13 +38,20 @@ export default {
     transition: all .5s ease;
     cursor: default;
   }
-  .inner-cards dl dt {
+  dl dt {
     font-size: 24px;
     line-height: 44px;
     color: #333;
   }
-  .inner-cards dl dd {
+  dl dd {
     color: #666;
     font-size: 14px;
+  }
+  img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
   }
 </style>

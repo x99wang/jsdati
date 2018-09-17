@@ -29,6 +29,11 @@ export default {
     float: left;
     text-align: right;
   }
+  .activity a {
+    color: #f5811e;
+    font-weight: 700;
+    border-color: #f5811e;
+  }
   a {
     box-sizing: border-box;
     display: inline-block;
@@ -38,5 +43,9 @@ export default {
     border-bottom: 5px solid transparent;
     font-size: 20px;
     color: #333;
+  }
+  .nav>li {
+    position: relative;
+    display: block;
   }
 </style>
