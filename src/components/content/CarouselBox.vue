@@ -33,7 +33,26 @@ export default {
   name: 'CarouselBox',
   props: {
     imgs: {
-      type: Array
+      type: Array,
+      default: function () {
+        return [{
+          id: 0,
+          name: '1',
+          src: 'https://static.jsdati.com/images/portal-v2/b/12.jpg'
+        }, {
+          id: 1,
+          name: '2',
+          src: 'https://static.jsdati.com/images/portal-v2/b/13.jpg'
+        }, {
+          id: 2,
+          name: '3',
+          src: 'https://static.jsdati.com/images/portal-v2/b/14.jpg'
+        }, {
+          id: 3,
+          name: '4',
+          src: 'https://static.jsdati.com/images/portal-v2/b/15.jpg'
+        }]
+      }
     }
   }
 }
